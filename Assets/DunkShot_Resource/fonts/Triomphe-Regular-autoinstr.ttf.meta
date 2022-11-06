@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 3f2298d1b04a32c43b32fdd079772b50
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Triomphe
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 11b58918426df2d41bb076a71355b662, type: 3}
+  - {fileID: 12800000, guid: 167a19ffc5e100f46b11716ee3d2c520, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
