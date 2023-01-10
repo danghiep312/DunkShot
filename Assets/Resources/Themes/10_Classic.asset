@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8a69a61f934b7fb32beb10d29bef9e, type: 3}
+  m_Name: 10_Classic
+  m_EditorClassIdentifier: 
+  id: 10
+  themeName: CLASSIC
+  themeIcon: {fileID: 21300000, guid: 00d67a10f8571e942b1af7785cb94fad, type: 3}
+  lightBackground: {fileID: 21300000, guid: bffa10a9ee2ab8f46bedb4b284f98b34, type: 3}
+  nightBackground: {fileID: 21300000, guid: 5a34035a2dc044c478af8385c12e9454, type: 3}
+  lightOffsetBackground: {fileID: 0}
+  nightOffsetBackground: {fileID: 0}
+  secondNightOffsetBackground: {fileID: 0}
+  backHoop: {fileID: 21300000, guid: e944e6a39faf09f4ea6365e93a21b0f0, type: 3}
+  frontHoop: {fileID: 21300000, guid: 904ac278ddf5d654ba3deacbb9f010ad, type: 3}
+  backHoopInactive: {fileID: 21300000, guid: 3022894dd2c30114ea0d64d1e87794d8, type: 3}
+  frontHoopInactive: {fileID: 21300000, guid: 302d7069e433c6c45b973246380244f7, type: 3}
+  veryLargeWall: {fileID: 21300000, guid: f84b89c20b95bc64da9b68bca160f60e, type: 3}
+  largeWall: {fileID: 21300000, guid: 506366c73dec6d142892fb5f162cabf2, type: 3}
+  mediumWall: {fileID: 21300000, guid: fbe4f887e8c8db14487a77480d4f69f1, type: 3}
+  smallWall: {fileID: 21300000, guid: 1b67169a456fd6e4ca87fc261358128d, type: 3}
+  price: 0

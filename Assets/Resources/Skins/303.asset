@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b8770bcb6544437bdefc869352c22ab, type: 3}
+  m_Name: 303
+  m_EditorClassIdentifier: 
+  id: 303
+  ballSprite: {fileID: 21300000, guid: 4140c08cd03ce8742a8ad0c20a0f919f, type: 3}
+  offsetSprite: {fileID: 0}
+  perfectSprite: {fileID: 21300000, guid: 0761e30b2e8421046970d88daf682248, type: 3}
+  colorOfFlame: {r: 0, g: 0, b: 0, a: 0}
+  description: Play a game x5
+  price: 5

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8a69a61f934b7fb32beb10d29bef9e, type: 3}
+  m_Name: 12_Notebook
+  m_EditorClassIdentifier: 
+  id: 12
+  themeName: NOTEBOOK
+  themeIcon: {fileID: 21300000, guid: a8613ac745d6b6941808e35a4ffeb4e6, type: 3}
+  lightBackground: {fileID: 21300000, guid: bed3f7bc32b242644bb03f5c610da8f7, type: 3}
+  nightBackground: {fileID: 21300000, guid: c9fda8a62b8e40a449cc2563a128fcca, type: 3}
+  lightOffsetBackground: {fileID: 21300000, guid: 77fa25c9935695a46ad0172e9c599c49, type: 3}
+  nightOffsetBackground: {fileID: 21300000, guid: 77fa25c9935695a46ad0172e9c599c49, type: 3}
+  secondNightOffsetBackground: {fileID: 0}
+  backHoop: {fileID: 21300000, guid: af1302219584a8f4b8af24ce821a34da, type: 3}
+  frontHoop: {fileID: 21300000, guid: 0fae8f5b8c353984b9e953721cb2f156, type: 3}
+  backHoopInactive: {fileID: 21300000, guid: 3022894dd2c30114ea0d64d1e87794d8, type: 3}
+  frontHoopInactive: {fileID: 21300000, guid: 302d7069e433c6c45b973246380244f7, type: 3}
+  veryLargeWall: {fileID: 21300000, guid: 9dfdd3d7293b8f047a52d78df72e7018, type: 3}
+  largeWall: {fileID: 21300000, guid: 8c7d4aeddbb2c1b41bebe8e05fee7ba0, type: 3}
+  mediumWall: {fileID: 21300000, guid: 2aac299470dbdea44b905b6ea16f7d3c, type: 3}
+  smallWall: {fileID: 21300000, guid: 24d9b2d971a3ecd4f9863fb2a8c14ccf, type: 3}
+  price: 100

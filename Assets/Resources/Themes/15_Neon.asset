@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8a69a61f934b7fb32beb10d29bef9e, type: 3}
+  m_Name: 15_Neon
+  m_EditorClassIdentifier: 
+  id: 15
+  themeName: NEON
+  themeIcon: {fileID: 21300000, guid: 847d33eab88b49949bdb726c2f41211e, type: 3}
+  lightBackground: {fileID: 21300000, guid: f8792cfa6c37a3648978896d6691c5de, type: 3}
+  nightBackground: {fileID: 21300000, guid: 5bbdfa83b3bc0d54e82d9ac7136777a1, type: 3}
+  lightOffsetBackground: {fileID: 21300000, guid: 349f74aebacd18740be619a76ca33682, type: 3}
+  nightOffsetBackground: {fileID: 21300000, guid: 349f74aebacd18740be619a76ca33682, type: 3}
+  secondNightOffsetBackground: {fileID: 0}
+  backHoop: {fileID: 21300000, guid: 3cd866bd8fc39c04e8343cd112eecac9, type: 3}
+  frontHoop: {fileID: 21300000, guid: df640b61304feb547969da4a8b37248b, type: 3}
+  backHoopInactive: {fileID: 21300000, guid: 3022894dd2c30114ea0d64d1e87794d8, type: 3}
+  frontHoopInactive: {fileID: 21300000, guid: 302d7069e433c6c45b973246380244f7, type: 3}
+  veryLargeWall: {fileID: 21300000, guid: 4c532823e87465248bf88c2d5720af42, type: 3}
+  largeWall: {fileID: 21300000, guid: 3992fafff464e5646869079174bd2f9a, type: 3}
+  mediumWall: {fileID: 21300000, guid: 3ad7f45081e2cc84d80075d9a06fa821, type: 3}
+  smallWall: {fileID: 21300000, guid: c62068c49806dbb44b94bbe9ae74312a, type: 3}
+  price: 500

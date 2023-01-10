@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b8770bcb6544437bdefc869352c22ab, type: 3}
+  m_Name: 100
+  m_EditorClassIdentifier: 
+  id: 100
+  ballSprite: {fileID: 21300000, guid: 97824c59c9dbece43b5f02d3b7cf722b, type: 3}
+  offsetSprite: {fileID: 21300000, guid: 570f609f46a79da438c2cfa137180b89, type: 3}
+  perfectSprite: {fileID: 21300000, guid: 37dacc113d11eef418e3b245e440c943, type: 3}
+  colorOfFlame: {r: 0, g: 0, b: 0, a: 0}
+  description: 
+  price: 0

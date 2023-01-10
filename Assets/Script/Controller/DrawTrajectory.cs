@@ -10,7 +10,8 @@ public class DrawTrajectory : Singleton<DrawTrajectory>
     // predict line
     [SerializeField] private GameObject point;
     [SerializeField] private GameObject[] points;
-
+    private SpriteRenderer[] pointSprites;
+    
     [SerializeField]
     [Range(1, 20)]
     private int numberOfPoints;
@@ -20,33 +21,21 @@ public class DrawTrajectory : Singleton<DrawTrajectory>
         this.RegisterListener(EventID.Launch, param => OnLaunchBall());
 
         points = new GameObject[numberOfPoints];
+        pointSprites = new SpriteRenderer[points.Length];
         //spaceBetweenPoints = new float[numberOfPoints];
         for (int i = 0; i < numberOfPoints; i++)
         {
             points[i] = Instantiate(point, transform);
+            pointSprites[i] = points[i].GetComponent<SpriteRenderer>();
+            if (i > 0)
+            {
+                points[i].transform.localScale = points[i - 1].transform.localScale * 0.98f;
+            }
         }
 
         SetVisibleOfTrajectoryLine(false);
     }
-
-    public void UpdateTrajectoryLine(Vector3 force, Rigidbody2D rb, Vector3 startingPoint)
-    {
-        var velocity = (force / rb.mass) * Time.fixedDeltaTime;
-        
-        var timeToMaxHeight = velocity.y / Physics2D.gravity.y;
-        for (int i = 1; i <= numberOfPoints; i++)
-        {
-            if (i <= timeToMaxHeight)
-            {
-                points[i - 1].transform.position = new Vector3(velocity.x * i, velocity.y * i, 0) + startingPoint;
-            }
-            else
-            {
-                points[i - 1].transform.position = new Vector3(velocity.x * i, velocity.y * timeToMaxHeight + Physics2D.gravity.y * (i - timeToMaxHeight) * (i - timeToMaxHeight) / 2, 0) + startingPoint;
-            }
-        }
-    }
-
+    
     public void SetPosOfPoint(Vector3[] pos, int step)
     {
         for (int i = 0; i < numberOfPoints; i++)
@@ -68,6 +57,16 @@ public class DrawTrajectory : Singleton<DrawTrajectory>
         if (!keepPredictLine)
         {
             SetVisibleOfTrajectoryLine(false);
+        }
+    }
+    
+    public void SetAlphaOfTrajectoryLine(float alpha)
+    {
+        for (var i = 0; i < numberOfPoints; i++)
+        {
+            var color = pointSprites[i].color;
+            color.a = alpha;
+            pointSprites[i].color = color;
         }
     }
 }

@@ -15,10 +15,17 @@ public class Common
 	//--------------------- Log , warning, 
 	
 	[Conditional("DEBUG")]
-	public static void Log(object message)
+	public static void Log(object message, Object context = null)
 	{
 		if (!ALLOW_DEBUG) return;
-		Debug.Log(message);
+		if (context != null)
+		{
+			Debug.Log(message + " " + context.name, context);
+		}
+		else
+		{
+			Debug.Log(message, context);
+		}
 	}
 
 	[Conditional("DEBUG")]

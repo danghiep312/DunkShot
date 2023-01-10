@@ -3,7 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Wall
+  - Ball
+  - Hoop
+  - FakeObstacle
+  - Basket
+  - Net
+  - VeryLargeWall
+  - LargeWall
+  - MediumWall
+  - SmallWall
+  - Spin
+  - LineSlider
+  - Token
+  - Star
   layers:
   - Default
   - TransparentFX

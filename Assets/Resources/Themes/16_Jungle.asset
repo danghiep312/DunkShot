@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8a69a61f934b7fb32beb10d29bef9e, type: 3}
+  m_Name: 16_Jungle
+  m_EditorClassIdentifier: 
+  id: 16
+  themeName: JUNGLE
+  themeIcon: {fileID: 21300000, guid: 94c5c5543798cd3459afb082e963cdc8, type: 3}
+  lightBackground: {fileID: 21300000, guid: a863c436dc49db847bb1b7ebf58f4755, type: 3}
+  nightBackground: {fileID: 21300000, guid: 7f27defe6db3b8a4c9f216418899dcc3, type: 3}
+  lightOffsetBackground: {fileID: 21300000, guid: 228f828baedf81c44a9050a5c735cf20, type: 3}
+  nightOffsetBackground: {fileID: 21300000, guid: 228f828baedf81c44a9050a5c735cf20, type: 3}
+  secondNightOffsetBackground: {fileID: 0}
+  backHoop: {fileID: 21300000, guid: 31b69f39e7f6b8643957482df98313d4, type: 3}
+  frontHoop: {fileID: 21300000, guid: 771b396c05cb11540a3ee288de7989e6, type: 3}
+  backHoopInactive: {fileID: 21300000, guid: 445f5458dfdbfac439c6f2fba044ca98, type: 3}
+  frontHoopInactive: {fileID: 21300000, guid: 65d232b67a34d9d429aa15d058073758, type: 3}
+  veryLargeWall: {fileID: 21300000, guid: 31c214c2083c13342958a1a2226809a2, type: 3}
+  largeWall: {fileID: 21300000, guid: dc4813d90b8832247a6e25633559c748, type: 3}
+  mediumWall: {fileID: 21300000, guid: 92b00551a078abb4bbb8af44d37921fa, type: 3}
+  smallWall: {fileID: 21300000, guid: 5e499b8b7728aa74baad2c4d95ed4b32, type: 3}
+  price: 500

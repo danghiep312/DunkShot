@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8a69a61f934b7fb32beb10d29bef9e, type: 3}
+  m_Name: 17_Egypt
+  m_EditorClassIdentifier: 
+  id: 17
+  themeName: EGYPT
+  themeIcon: {fileID: 21300000, guid: 40454c29ee7ec894abf9e59425eb00e6, type: 3}
+  lightBackground: {fileID: 21300000, guid: 79c3cb9b1ecd1ac4aaf28bec5efb66eb, type: 3}
+  nightBackground: {fileID: 21300000, guid: ddefbb77ec650cf488ff3775c40cbd56, type: 3}
+  lightOffsetBackground: {fileID: 21300000, guid: 4b89617ef1d272f4ea5686f0e374a844, type: 3}
+  nightOffsetBackground: {fileID: 21300000, guid: 41befaa316756ec45b711972f0a2798a, type: 3}
+  secondNightOffsetBackground: {fileID: 0}
+  backHoop: {fileID: 21300000, guid: e021419b6261ea6489916c3531ce18ba, type: 3}
+  frontHoop: {fileID: 21300000, guid: a8b4d2fd9fbae6e4b867077447adf9a3, type: 3}
+  backHoopInactive: {fileID: 21300000, guid: 89969c4551c03a248821b058f739a3b5, type: 3}
+  frontHoopInactive: {fileID: 21300000, guid: 55c4ade0d40b8034ba42e5e42d70f310, type: 3}
+  veryLargeWall: {fileID: 21300000, guid: 02f9dd0b7a482704ea6cb5ae194ea55a, type: 3}
+  largeWall: {fileID: 21300000, guid: a16a9d082df3459409007d51a11a879a, type: 3}
+  mediumWall: {fileID: 21300000, guid: 3d9aee7d604c1564bb69fd6c39cbd9a0, type: 3}
+  smallWall: {fileID: 21300000, guid: f64da152593c58346bd6bd90a7f990cd, type: 3}
+  price: 500

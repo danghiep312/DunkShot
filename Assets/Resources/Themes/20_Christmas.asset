@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8a69a61f934b7fb32beb10d29bef9e, type: 3}
+  m_Name: 20_Christmas
+  m_EditorClassIdentifier: 
+  id: 20
+  themeName: CHRISTMAS
+  themeIcon: {fileID: 21300000, guid: a13cec7806f722d43989c3d3fed80079, type: 3}
+  lightBackground: {fileID: 21300000, guid: bffa10a9ee2ab8f46bedb4b284f98b34, type: 3}
+  nightBackground: {fileID: 21300000, guid: 5a34035a2dc044c478af8385c12e9454, type: 3}
+  lightOffsetBackground: {fileID: 21300000, guid: b3d450cb973603243bfffc14cf076bdc, type: 3}
+  nightOffsetBackground: {fileID: 21300000, guid: 0f28f9d472b15a14f9c0c5bc32d796b6, type: 3}
+  secondNightOffsetBackground: {fileID: 0}
+  backHoop: {fileID: 21300000, guid: 4b9ce555460e9a54b93f9d3154313d96, type: 3}
+  frontHoop: {fileID: 21300000, guid: c6cc07bcbf4d43743a93e4b3767b0300, type: 3}
+  backHoopInactive: {fileID: 21300000, guid: 4cfa52b45c83d2147a084f8f06f2e45a, type: 3}
+  frontHoopInactive: {fileID: 21300000, guid: 8f9bf26c9fa4fbe4fa6e92202b7e0ded, type: 3}
+  veryLargeWall: {fileID: 21300000, guid: 651930e6e66af8e49a5d775e3557b933, type: 3}
+  largeWall: {fileID: 21300000, guid: bca1823028deaf24ba6b0f9546fb1fcd, type: 3}
+  mediumWall: {fileID: 21300000, guid: 7e208d3426439ee42ab1654f08273e14, type: 3}
+  smallWall: {fileID: 21300000, guid: 88148aeebe7c7c048a817144b811aa10, type: 3}
+  price: 0

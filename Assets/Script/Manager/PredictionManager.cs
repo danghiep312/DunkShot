@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class PredictionManager : Singleton<PredictionManager>
 {
+    public GameObject dummyPrefab;
+    
     // predict trajectory of object
     public GameObject obstacles;
     public int maxIterations;
@@ -59,6 +61,7 @@ public class PredictionManager : Singleton<PredictionManager>
                 {
                     fakeSR.enabled = false;
                 }
+                fakeT.tag = "FakeObstacle";
                 SceneManager.MoveGameObjectToScene(fakeT, predictionScene);
                 dummyObstacles.Add(fakeT);
             }
@@ -74,9 +77,8 @@ public class PredictionManager : Singleton<PredictionManager>
         dummyObstacles.Clear();
     }
 
-    public Vector3[] Predict(GameObject subject, Vector3 currentPosition, Vector3 force)
+    public Vector3[] Predict(Vector3 currentPosition, Vector3 force)
     {
-        Common.Log(cam.transform.position.y);
         for (int i = 0; i < obstacles.transform.childCount; i++)
         {
             obstacles.transform.GetChild(i).position = new Vector3(obstacles.transform.GetChild(i).position.x, cam.transform.position.y, obstacles.transform.GetChild(i).position.z);
@@ -85,7 +87,7 @@ public class PredictionManager : Singleton<PredictionManager>
         {
             if (dummy == null)
             {
-                dummy = Instantiate(subject, currentPosition, Quaternion.identity);
+                dummy = Instantiate(dummyPrefab, currentPosition, Quaternion.identity);
                 SceneManager.MoveGameObjectToScene(dummy, predictionScene);
             }
 
