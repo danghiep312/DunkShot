@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TimeHud : MonoBehaviour
 {
+    public TextMeshProUGUI titleLevel;
     public TextMeshProUGUI second;
     public TextMeshProUGUI milliSecond;
     public TextMeshProUGUI hoopRemaining;
@@ -22,7 +23,6 @@ public class TimeHud : MonoBehaviour
 
     private void Start()
     {
-        this.RegisterListener(EventID.PassHoopChallenge, (param) => OnHoopChallengePassed());
         this.RegisterListener(EventID.StartChallenge, (param) => OnStartChallenge());
         this.RegisterListener(EventID.GameOver, (param) => OnGameOver());
         this.RegisterListener(EventID.BackFromChallenge, (param) => BackFromChallenge());
@@ -40,11 +40,6 @@ public class TimeHud : MonoBehaviour
         isGameStarted = true;
     }
 
-    private void OnHoopChallengePassed()
-    {
-        hoopRemaining.text = LevelManager.Instance.hoopPassed + "/" + totalHoop + " HOOPS";
-    }
-
     private void Update()
     {
         if (isGameStarted)
@@ -60,7 +55,8 @@ public class TimeHud : MonoBehaviour
             }
             
         }
-
+        titleLevel.text = "CHALLENGE " + int.Parse(LevelManager.Instance.currentLv.id.ToString().Substring(1, 2));
+        hoopRemaining.text = LevelManager.Instance.hoopPassed + "/" + totalHoop + " HOOPS";
         timeSpan = TimeSpan.FromSeconds(timeRemaining);
         var time = timeSpan.ToString(@"ss\:ff");
         second.text = time.Split(':')[0] + ":";

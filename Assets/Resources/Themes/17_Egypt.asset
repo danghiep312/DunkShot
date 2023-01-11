@@ -28,4 +28,6 @@ MonoBehaviour:
   largeWall: {fileID: 21300000, guid: a16a9d082df3459409007d51a11a879a, type: 3}
   mediumWall: {fileID: 21300000, guid: 3d9aee7d604c1564bb69fd6c39cbd9a0, type: 3}
   smallWall: {fileID: 21300000, guid: f64da152593c58346bd6bd90a7f990cd, type: 3}
+  alphaLight: 1
+  alphaDark: 1
   price: 500

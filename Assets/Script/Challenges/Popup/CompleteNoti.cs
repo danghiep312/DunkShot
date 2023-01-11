@@ -18,6 +18,8 @@ public class CompleteNoti : MonoBehaviour
     private void OnEnable()
     {
         SetData(LevelManager.Instance.currentLv);
+        
+        ScoreManager.AddToken(LevelManager.Instance.currentLv.reward);
     }
 
     #region Sprite and Color

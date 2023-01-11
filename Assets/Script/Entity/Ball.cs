@@ -23,9 +23,7 @@ public class Ball : MonoBehaviour
     public bool inHoop;
     public bool passHoop;
     public Vector3 target;
-
-    public ParticleSystem smoke;
-    public ParticleSystem[] flame;
+    
 
     public bool canShoot;
     private void Start()
@@ -183,9 +181,9 @@ public class Ball : MonoBehaviour
         if (col.gameObject.CompareTag("Hoop"))
         {
             Streak = 1;
-            PlayParticleSystem(Streak);
+            GetComponent<BallTrail>().PlayParticleSystem(Streak);
         }
-        else if (col.gameObject.CompareTag("Wall"))
+        else if (col.gameObject.tag.Contains("Wall"))
         {
             Bounce++;
         }
@@ -210,7 +208,7 @@ public class Ball : MonoBehaviour
     private void OnGameOver()
     {
         ResetStreak();
-        PlayParticleSystem(Streak);
+        GetComponent<BallTrail>().PlayParticleSystem(Streak);
     }
     
     private void OnHoopPassed()
@@ -232,7 +230,7 @@ public class Ball : MonoBehaviour
     private void OnReachPerfect()
     {
         Streak++;
-        PlayParticleSystem(Streak);
+        GetComponent<BallTrail>().PlayParticleSystem(Streak);
     }
 
     private Vector2 GetMousePosition()
@@ -257,30 +255,7 @@ public class Ball : MonoBehaviour
             transform.rotation = Quaternion.Euler(Vector3.zero);
         }
     }
-
-    private void PlayParticleSystem(int streak)
-    {
-        if (streak >= 4)
-        {
-            smoke.Stop();
-            foreach (var ps in flame)
-            {
-                ps.Play();
-            }      
-        }   
-        else if (streak == 3)
-        {
-            smoke.Play();
-        }
-        else
-        {
-            smoke.Stop();
-            foreach (var ps in flame)
-            {
-                ps.Stop();
-            } 
-        }
-    }
+    
 
     public void Spawn(Vector3 pos)
     {

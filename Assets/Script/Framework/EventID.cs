@@ -9,6 +9,7 @@ public enum EventID
     BallInHoop,
     MoveCamera,
     ReachPerfect,
+    ToggleNightMode,
     //State
     GameOver,
     PlayGame,

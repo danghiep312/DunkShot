@@ -16,6 +16,64 @@ MonoBehaviour:
   ballSprite: {fileID: 21300000, guid: 97824c59c9dbece43b5f02d3b7cf722b, type: 3}
   offsetSprite: {fileID: 21300000, guid: 570f609f46a79da438c2cfa137180b89, type: 3}
   perfectSprite: {fileID: 21300000, guid: 37dacc113d11eef418e3b245e440c943, type: 3}
-  colorOfFlame: {r: 0, g: 0, b: 0, a: 0}
+  colorOfFlame:
+    serializedVersion: 2
+    key0: {r: 0.96060586, g: 1, b: 0, a: 1}
+    key1: {r: 1, g: 0.6564783, b: 0, a: 1}
+    key2: {r: 0.0627451, g: 0.7921569, b: 0.68235296, a: 0.003921569}
+    key3: {r: 0.0627451, g: 0.7921569, b: 0.68235296, a: 0.003921569}
+    key4: {r: 0.0627451, g: 0.7921569, b: 0.68235296, a: 0.003921569}
+    key5: {r: 0.0627451, g: 0.7921569, b: 0.68235296, a: 0.003921569}
+    key6: {r: 0.0627451, g: 0.7921569, b: 0.68235296, a: 0.003921569}
+    key7: {r: 0.0627451, g: 0.7921569, b: 0.68235296, a: 0.003921569}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 771
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  smokeColor:
+    serializedVersion: 2
+    key0: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0.5176471}
+    key1: {r: 1, g: 0.48650524, b: 0, a: 0.46666667}
+    key2: {r: 1, g: 0.37736028, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 33153
+    ctime2: 64764
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 32189
+    atime2: 63800
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 3
   description: 
   price: 0
+  paramToCheck: 0

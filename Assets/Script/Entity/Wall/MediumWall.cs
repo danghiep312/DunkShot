@@ -9,11 +9,13 @@ public class MediumWall : MonoBehaviour
     private void OnEnable()
     {
         if (Time.frameCount < 3) return;
-        hoop = ObjectPooler.Instance.Spawn("Hoop");
-        if (!transform.parent.name.Contains("ObjectPooler"))
+        if (!transform.parent.name.Contains("Object Pooler"))
         {
+            hoop = gameObject.transform.GetChild(0).gameObject;
             hoop.GetComponent<Hoop>().hoopInChallenge = true;
+            return;
         }
+        hoop = ObjectPooler.Instance.Spawn("Hoop");
         hoop.transform.SetParent(transform);
         hoop.GetComponent<Hoop>().Appearance(Vector3.right * 2.5f + Vector3.up * 2f);
         //hoop.transform.position = transform.position + Vector3.up * -1.5f

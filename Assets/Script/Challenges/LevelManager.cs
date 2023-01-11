@@ -96,7 +96,13 @@ public class LevelManager : Singleton<LevelManager>
         if (currentLv.type.Equals("Time") | currentLv.type.Equals("NewBall") | currentLv.type.Equals("NoAim"))
         {
             PlayerPrefs.SetInt("Level" + currentLv.id, 1);
+            if (int.Parse(currentLv.id.ToString().Substring(1, 2)) ==
+                GetNumberLevelOfType(int.Parse(currentLv.id.ToString().Substring(0, 1))))
+            {
+                PlayerPrefs.SetInt(currentLv.type + "Complete", 1);
+            }
             this.PostEvent(EventID.CompleteChallenge);
+            PlayerPrefs.SetInt("4" + currentLv.id.ToString().Substring(1, 2), 1);
         }
         else switch (currentLv.type)
         {
@@ -134,7 +140,7 @@ public class LevelManager : Singleton<LevelManager>
             4 => "Score",
             5 => "Bounce",
             6 => "NoAim",
-            _ => "" 
+            _ => ""     
         };
         var level = GetCurrentLevelToPlay(type);
         Debug.Log(level);
@@ -169,6 +175,10 @@ public class LevelManager : Singleton<LevelManager>
 
     public void RestartLevel()
     {
+        hoopPassed = 0;
+        totalBounce = 0;
+        totalToken = 0;
+        hp = 3;
         this.PostEvent(EventID.RestartLevel);
         var level = int.Parse(currentLv.id.ToString().Substring(1, 2));
         var levelPrefab = Resources.Load<GameObject>(LEVEL_PATH + currentLv.id.ToString().Substring(0,1) + $"{level:00}");
@@ -215,5 +225,43 @@ public class LevelManager : Singleton<LevelManager>
         {
             Debug.Log(e);
         }
+    }
+
+    public int GetNumberCompleteLevel(int type)
+    {
+        var typeName = type switch
+        {
+            1 => "NewBall",
+            2 => "Collect",
+            3 => "Time",
+            4 => "Score",
+            5 => "Bounce",
+            6 => "NoAim",
+            _ => "" 
+        };
+        for (int i = levels.Length - 1; i >= 0; i--)
+        {
+            if (levels[i].type.Equals(typeName) && PlayerPrefs.GetInt("Level" + levels[i].id) == 1)
+            {
+                return levels[i].id - type * 100;
+            }
+        }
+
+        return 0;
+    }
+
+    public int GetNumberLevelOfType(int type)
+    {
+        var typeName = type switch
+        {
+            1 => "NewBall",
+            2 => "Collect",
+            3 => "Time",
+            4 => "Score",
+            5 => "Bounce",
+            6 => "NoAim",
+            _ => "" 
+        };
+        return levels.Count(level => level.type.Equals(typeName));
     }
 }

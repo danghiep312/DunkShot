@@ -17,17 +17,13 @@ public class WallSpriteController : MonoBehaviour
         theme = GameSpriteMachine.Instance.FindThemeById(id);
     }
 
-
     public void Update()
     {
-        wall.sprite = gameObject.name switch
-        {
-            "VeryLargeWall(Clone)" => theme.veryLargeWall,
-            "LargeWall(Clone)" => theme.largeWall,
-            "MediumWall(Clone)" => theme.mediumWall,
-            "SmallWall(Clone)" => theme.smallWall,
-            "Spin(Clone)" => theme.mediumWall,
-            _ => wall.sprite
-        };
+
+        wall.sprite = gameObject.name.Contains("VeryLargeWall") ? theme.veryLargeWall : wall.sprite;
+        wall.sprite = gameObject.name.Contains("LargeWall") ? theme.largeWall : wall.sprite;
+        wall.sprite = gameObject.name.Contains("MediumWall") ? theme.mediumWall : wall.sprite;
+        wall.sprite = gameObject.name.Contains("SmallWall") ? theme.smallWall : wall.sprite;
+        wall.sprite = gameObject.name.Contains("Spin") ? theme.mediumWall : wall.sprite;
     }
 }

@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class NoAimHud : MonoBehaviour
 {
     public TextMeshProUGUI hoopRemaining;
+    public TextMeshProUGUI titleLevel;
 
     public int totalHoop;
     public Image[] hp;
@@ -35,6 +36,7 @@ public class NoAimHud : MonoBehaviour
 
     public void Update()
     {
+        titleLevel.text = "CHALLENGE " + int.Parse(LevelManager.Instance.currentLv.id.ToString().Substring(1, 2));
         hoopRemaining.text = LevelManager.Instance.hoopPassed + "/" + totalHoop + " HOOPS";
         for (var i = 0; i < hp.Length; i++)
         {

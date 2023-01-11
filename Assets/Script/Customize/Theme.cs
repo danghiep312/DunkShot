@@ -29,5 +29,18 @@ public class Theme : ScriptableObject
     public Sprite mediumWall;
     public Sprite smallWall;
     
+    
+    /// <summary>
+    /// alpha of background each theme
+    /// </summary>
+    [Header("Alpha")]
+    public float alphaLight;
+    public float alphaDark; 
+    
+    [Header("For UI")]
+    public Color scoreColor;
+    public Color buttonColor;
+    public Color scoreDarkColor;
+
     public int price;
 }

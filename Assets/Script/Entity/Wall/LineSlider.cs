@@ -8,16 +8,20 @@ public class LineSlider : MonoBehaviour
     private void OnEnable()
     {
         if (Time.frameCount < 3) return;
-        hoop = ObjectPooler.Instance.Spawn("Hoop");
-        if (!transform.parent.name.Contains("ObjectPooler"))
+        if (!transform.parent.name.Contains("Object Pooler"))
         {
+            hoop = gameObject.transform.GetChild(0).gameObject;
             hoop.GetComponent<Hoop>().hoopInChallenge = true;
         }
-        hoop.transform.SetParent(transform);
-        hoop.transform.localPosition = Vector3.right * 1.5f + Vector3.up * 0.2f;
-        hoop.transform.DOMoveX(-1.5f, 2.5f).SetEase(Ease.InOutSine).OnComplete(() =>
+        else
         {
-            hoop.transform.DOMoveX(1.5f, 2.5f).SetEase(Ease.InOutSine);
+            hoop = ObjectPooler.Instance.Spawn("Hoop");
+            hoop.transform.SetParent(transform);
+            hoop.transform.localPosition = Vector3.right * 1.5f + Vector3.up * 0.2f;
+        }
+        hoop.transform.DOLocalMoveX(-1.5f, 2.5f).SetEase(Ease.InOutSine).OnComplete(() =>
+        {
+            hoop.transform.DOLocalMoveX(1.5f, 2.5f).SetEase(Ease.InOutSine);
         }).SetLoops(-1, LoopType.Yoyo);
     }
 
@@ -28,10 +32,10 @@ public class LineSlider : MonoBehaviour
 
     private void OnHoopPassed()
     {
-        if (hoop.GetComponent<Hoop>().containsBall)
+        if (hoop != null && hoop.GetComponent<Hoop>().containsBall)
         {
             hoop.transform.DOKill();
-            hoop.transform.SetParent(null);
+            hoop.transform.SetParent(hoop.GetComponent<Hoop>().hoopInChallenge ? transform.parent : null);
             foreach (Transform t in transform)
             {
                 t.GetComponent<Disappearance>().Excute();

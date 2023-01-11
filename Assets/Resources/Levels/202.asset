@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 202
   m_EditorClassIdentifier: 
   id: 202
-  totalHoop: 9
+  totalHoop: 11
   target: 20
   reward: 20
   type: Collect

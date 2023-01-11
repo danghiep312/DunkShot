@@ -14484,6 +14484,7 @@ GameObject:
   - component: {fileID: 7376477658499728954}
   - component: {fileID: 7376477658499728953}
   - component: {fileID: 7376477658499728957}
+  - component: {fileID: 6315096075219285658}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -14617,7 +14618,19 @@ MonoBehaviour:
   inHoop: 0
   passHoop: 0
   target: {x: 0, y: 0, z: 0}
+  canShoot: 0
+--- !u!114 &6315096075219285658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7376477658499728952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d3684198094a2db446c200d551d0ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   smoke: {fileID: 6652112810694353980}
-  flame:
-  - {fileID: 3239521265675875059}
-  - {fileID: 5607355234369365568}
+  smokeFlame: {fileID: 3239521265675875059}
+  flame: {fileID: 5607355234369365568}

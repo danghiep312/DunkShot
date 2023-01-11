@@ -51,15 +51,15 @@ public class UncompleteNoti : MonoBehaviour
             : "CHALLENGE " + int.Parse(lv.id.ToString().Substring(1, 2)) + " FAILED";
         description.text = lv.type switch
         {
-            "NewBall" => "Hoops completed " + LevelManager.Instance.hoopPassed + "/" + LevelManager.Instance.currentLv.target,
+            "NewBall" => "Hoops completed " + LevelManager.Instance.hoopPassed + "/" + LevelManager.Instance.currentLv.totalHoop,
             "Collect" => LevelManager.Instance.totalToken + "/" + LevelManager.Instance.currentLv.target + " token, " +
                          (lv.totalHoop - hoopPassed) + " hoops left",
-            "Time" => "Hoops completed " + LevelManager.Instance.hoopPassed + "/" + LevelManager.Instance.currentLv.target,
+            "Time" => "Hoops completed " + LevelManager.Instance.hoopPassed + "/" + LevelManager.Instance.currentLv.totalHoop,
             "Score" => ScoreManager.Score + "/" + LevelManager.Instance.currentLv.target + " score, " +
                        (lv.totalHoop - hoopPassed) + " hoops left",
             "Bounce" => LevelManager.Instance.totalBounce + "/" + LevelManager.Instance.currentLv.target + " bounces, " +
                         (lv.totalHoop - hoopPassed) + " hoops left",
-            "NoAim" => "Hoops completed " + LevelManager.Instance.hoopPassed + "/" + LevelManager.Instance.currentLv.target,
+            "NoAim" => "Hoops completed " + LevelManager.Instance.hoopPassed + "/" + LevelManager.Instance.currentLv.totalHoop,
             _ => ""
         };
         

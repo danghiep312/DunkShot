@@ -11,13 +11,10 @@ public class Skin : ScriptableObject
     [PreviewField]
     public Sprite offsetSprite;
     
-    [HorizontalGroup("Flame Data", 75)]
     [PreviewField(75)]
-    [HideLabel]
     public Sprite perfectSprite;
-    [VerticalGroup("Flame Data/Perfect")]
-    [HideLabel] 
-    public Color colorOfFlame;
+    public Gradient colorOfFlame;
+    public Gradient smokeColor;
     
     [TextArea]
     public string description;

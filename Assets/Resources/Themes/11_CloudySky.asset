@@ -28,4 +28,9 @@ MonoBehaviour:
   largeWall: {fileID: 21300000, guid: 8e5621a4cdf145b4eb0aaac126258b26, type: 3}
   mediumWall: {fileID: 21300000, guid: 50ba532f4e8eb5044a0f765e13ca7c16, type: 3}
   smallWall: {fileID: 21300000, guid: 9ff4254b3b4a43f4e908c863cdc9623d, type: 3}
+  alphaLight: 0.8
+  alphaDark: 0.5
+  scoreColor: {r: 0.19215687, g: 0.5019608, b: 1, a: 1}
+  buttonColor: {r: 0.23529412, g: 0.41960785, b: 0.7921569, a: 1}
+  scoreDarkColor: {r: 0.67058825, g: 0.33333334, b: 1, a: 1}
   price: 100

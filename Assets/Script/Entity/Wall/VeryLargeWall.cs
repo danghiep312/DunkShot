@@ -8,6 +8,12 @@ public class VeryLargeWall : MonoBehaviour
     private void OnEnable()
     {
         if (Time.frameCount < 3) return;
+        if (!transform.parent.name.Contains("Object Pooler"))
+        {
+            hoop = gameObject.transform.GetChild(0).gameObject;
+            hoop.GetComponent<Hoop>().hoopInChallenge = true;
+            return;
+        }
         hoop = ObjectPooler.Instance.Spawn("Hoop");
         hoop.transform.SetParent(transform);
         hoop.GetComponent<Hoop>().Appearance(Vector3.right * 2.5f + Vector3.up * 2f);

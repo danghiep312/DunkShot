@@ -116,7 +116,7 @@ public class AchievementManager : Singleton<AchievementManager>
         foreach (var skin in s)
         {
             if (Regex.IsMatch(skin.id.ToString(), @"^2.{2}$"))
-            {
+            {   
                 CheckCondition(PlayerPrefs.GetInt("Watch" + skin.id), skin.price, skin.id);
             }
             else if (Regex.IsMatch(skin.id.ToString(), @"^3.{2}$"))
